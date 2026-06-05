@@ -44,7 +44,7 @@ def load_data() -> pd.DataFrame:
     return data
 
 
-@st.cache_resource
+# Caching decorator removed from here to fix the _pickle.PicklingError
 def train_or_load_pipeline():
     data = load_data()
     X_train, X_test, y_train, y_test = train_test_split(
@@ -55,6 +55,8 @@ def train_or_load_pipeline():
         ("model", LogisticRegression(max_iter=1000, solver="liblinear", random_state=42))
     ])
     pipeline.fit(X_train, y_train)
+    
+    # joblib can now safely save this pure pipeline to disk
     joblib.dump(pipeline, MODEL_PATH)
 
     y_pred = pipeline.predict(X_test)
@@ -156,7 +158,13 @@ def main():
         st.error(f"Dataset not found at {DATA_PATH}. Keep Restaurant_Reviews.tsv in the same folder as this app.")
         st.stop()
 
-    pipeline, model_metrics, training_baseline = train_or_load_pipeline()
+    # Model training and optimization handled safely here via Streamlit session state
+    if "cached_model_data" not in st.session_state:
+        pipeline, model_metrics, training_baseline = train_or_load_pipeline()
+        st.session_state.cached_model_data = (pipeline, model_metrics, training_baseline)
+    else:
+        pipeline, model_metrics, training_baseline = st.session_state.cached_model_data
+
     show_metric_cards(model_metrics, training_baseline)
 
     if "prediction_log" not in st.session_state:
