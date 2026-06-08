@@ -71,36 +71,37 @@ Follow these steps to run the project locally:
      [Text Input/CSV] ➔ [Text Preprocessing] ➔ [TF-IDF Vectorization] ➔ [Logistic Regression] ➔ [Confidence & Drift Metrics] ➔ [Dashboard UI]
 ```
 
-     - Text Preprocessing & Clean-up: Standardizes raw text by removing noise and irrelevant characters.
 
-     - TF-IDF Vectorization: Converts textual data into numerical features based on term frequency.
+- Text Preprocessing & Clean-up: Standardizes raw text by removing noise and irrelevant characters.
 
-     - Sentiment Classification: Uses a calibrated Logistic Regression model to classify sentiment.
+- TF-IDF Vectorization: Converts textual data into numerical features based on term frequency.
 
-     - Confidence Estimation: Extracts prediction probabilities for the predicted label.
+- Sentiment Classification: Uses a calibrated Logistic Regression model to classify sentiment.
 
-     - Monitoring Signal Generation: Signals metrics to the live dashboard for performance tracking.
+- Confidence Estimation: Extracts prediction probabilities for the predicted label.
+
+- Monitoring Signal Generation: Signals metrics to the live dashboard for performance tracking.
 
 # 🔮 Future Roadmap
-     - SHAP/LIME Integration: Add model explainability to see which words triggered the sentiment.
+- SHAP/LIME Integration: Add model explainability to see which words triggered the sentiment.
 
-     - FastAPI Backend: Decouple the ML pipeline into a high-performance REST API.
+- FastAPI Backend: Decouple the ML pipeline into a high-performance REST API.
 
-     - Database Logging: Store live predictions in a PostgreSQL or MongoDB database for historical analysis.
+- Database Logging: Store live predictions in a PostgreSQL or MongoDB database for historical analysis.
 
-     - Dockerization: Containerize the application for seamless cloud deployment.
+- Dockerization: Containerize the application for seamless cloud deployment.
 
-     - Advanced Drift Detection: Implement Kolmogorov-Smirnov tests for statistical drift tracking. 
+- Advanced Drift Detection: Implement Kolmogorov-Smirnov tests for statistical drift tracking. 
 
 # 👤 Author
-     - Sahil Borkar
-          - GitHub Profile: Sahil-Borkar-13
+- **Sahil Borkar**
+  - GitHub Profile: Sahil-Borkar-13
 
 # Areas of Interest
-     - Natural Language Processing (NLP)
+- Natural Language Processing (NLP)
 
-     - Machine Learning Operations (MLOps) & Deployment
+- Machine Learning Operations (MLOps) & Deployment
 
-     - Interactive Data Dashboards
+- Interactive Data Dashboards
 
-     - Data Visualization
+- Data Visualization
