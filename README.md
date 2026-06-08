@@ -50,7 +50,15 @@ Restaurant-Review-Sentiment-Analysis/
 
 # ⚙️ Installation & Setup
 Follow these steps to run the project locally:
-- 1. Clone Repository
+- Clone Repository
 ```bash
      git clone [https://github.com/Sahil-Borkar-13/Restaurant-Review-Sentiment-Analysis.git](https://github.com/Sahil-Borkar-13/Restaurant-Review-Sentiment-Analysis.git)
+```
+- Navigate to Project Folder
+```bash
+     cd Restaurant-Review-Sentiment-Analysis
+```
+- Install Dependencies
+```bash
+     pip install -r requirements.txt
 ```
