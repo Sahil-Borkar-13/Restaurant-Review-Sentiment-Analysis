@@ -62,3 +62,45 @@ Follow these steps to run the project locally:
 ```bash
      pip install -r requirements.txt
 ```
+- Run Streamlit App
+```bash
+     streamlit run streamlit_restaurant_monitoring_app.py
+```
+- Machine Learning Workflow
+```bash
+     [Text Input/CSV] ➔ [Text Preprocessing] ➔ [TF-IDF Vectorization] ➔ [Logistic Regression] ➔ [Confidence & Drift Metrics] ➔ [Dashboard UI]
+```
+
+     - Text Preprocessing & Clean-up: Standardizes raw text by removing noise and irrelevant characters.
+
+     - TF-IDF Vectorization: Converts textual data into numerical features based on term frequency.
+
+     - Sentiment Classification: Uses a calibrated Logistic Regression model to classify sentiment.
+
+     - Confidence Estimation: Extracts prediction probabilities for the predicted label.
+
+     - Monitoring Signal Generation: Signals metrics to the live dashboard for performance tracking.
+
+# 🔮 Future Roadmap
+     - SHAP/LIME Integration: Add model explainability to see which words triggered the sentiment.
+
+     - FastAPI Backend: Decouple the ML pipeline into a high-performance REST API.
+
+     - Database Logging: Store live predictions in a PostgreSQL or MongoDB database for historical analysis.
+
+     - Dockerization: Containerize the application for seamless cloud deployment.
+
+     - Advanced Drift Detection: Implement Kolmogorov-Smirnov tests for statistical drift tracking. 
+
+# 👤 Author
+     - Sahil Borkar
+          - GitHub Profile: Sahil-Borkar-13
+
+# Areas of Interest
+     - Natural Language Processing (NLP)
+
+     - Machine Learning Operations (MLOps) & Deployment
+
+     - Interactive Data Dashboards
+
+     - Data Visualization
